@@ -1,0 +1,38 @@
+.nav{
+    height: 100vb;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boite1{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 25vh;
+    width: 40vh;
+    background-color: aqua;
+    text-align: center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+#but1-grow-js {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+    
+}
+
+.grow-animation {
+    transform: scale(1.2); /* Le bouton s'agrandit */
+    cursor: pointer;
+}
