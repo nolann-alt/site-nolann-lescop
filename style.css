@@ -10,29 +10,66 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    height: 25vh;
+    height: 16vh;
     width: 40vh;
-    background-color: aqua;
+    background-color: none;
     text-align: center;
 }
 
 a{
-    color: black;
-    text-decoration: none;
-}
-
-#but1-grow-js {
-    padding: 10px 20px;
-    background-color: #3498db;
     color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: transform 0.3s ease;
-    
+    text-decoration: none;
+    cursor : pointer;
 }
 
-.grow-animation {
-    transform: scale(1.2); /* Le bouton s'agrandit */
-    cursor: pointer;
+#but1 {
+    background-color: black; /* Couleur de fond (vert) */
+    color: white; /* Couleur du texte */
+    border: none; /* Retirer les bordures par défaut */
+    border-radius: 12px; /* Coins arrondis */
+    padding: 15px 32px; /* Espacement interne (haut/bas, gauche/droite) */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le souligné du texte */
+    display: inline-block; /* S'assurer que le bouton se comporte comme un élément en ligne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Pointeur de souris pour indiquer que c'est cliquable */
+    transition: all 0.3s ease; /* Effet de transition pour les changements d'état */
+}
+
+/* Effet au survol (hover) */
+#but1:hover {
+    background-color: rgb(53, 53, 53); /* Couleur de fond changée au survol */
+    transform: translateY(-3px); /* Légère élévation du bouton */
+}
+
+/* Effet au clic (active) */
+#but1:active {
+    background-color: black; /* Couleur de fond lors du clic */
+    transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
+}
+
+#but2 {
+    background-color: black; /* Couleur de fond (vert) */
+    color: white; /* Couleur du texte */
+    border: none; /* Retirer les bordures par défaut */
+    border-radius: 12px; /* Coins arrondis */
+    padding: 15px 32px; /* Espacement interne (haut/bas, gauche/droite) */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Enlever le souligné du texte */
+    display: inline-block; /* S'assurer que le bouton se comporte comme un élément en ligne */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Pointeur de souris pour indiquer que c'est cliquable */
+    transition: all 0.3s ease; /* Effet de transition pour les changements d'état */
+}
+
+/* Effet au survol (hover) */
+#but2:hover {
+    background-color: rgb(53, 53, 53); /* Couleur de fond changée au survol */
+    transform: translateY(-3px); /* Légère élévation du bouton */
+}
+
+/* Effet au clic (active) */
+#but2:active {
+    background-color: black; /* Couleur de fond lors du clic */
+    transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
 }
