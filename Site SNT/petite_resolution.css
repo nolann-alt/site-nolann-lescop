@@ -1,0 +1,173 @@
+
+body{
+background-color: black;
+margin: 0;
+padding: 0;
+}
+nav{
+background-color:none;
+margin:auto;
+padding: 10px;
+width:100%;
+text-align: center;
+background-image: url("https://d2x38s7blvw0lt.cloudfront.net/uploads/2016/09/hack.png");
+}
+.liens{
+color: white;
+padding: 10px;
+font-size: 25px;
+
+}
+
+nav li{
+list-style-type: none;
+display: hangs horizontally;
+margin: 30px ;
+}
+
+h1{
+color: black;
+font-size: 40px;
+text-align: center;
+margin: auto;
+}
+
+header{
+background-color: black;
+height:375px;
+width: 100%;
+padding: 0;
+margin:0px;
+}
+
+#conteneur{
+display: flex;
+flex-direction: row;
+background-color: black;
+}
+
+#contenug{
+height: 300px;
+margin-top: 150px;
+}
+
+#contenud{
+height: 300px;
+margin-top: 150px;
+}
+.contenu{
+width: 200px;
+height: 500px;
+background-color: white;
+margin: 70px ;
+font-size: 24px;
+padding:10px;
+text-align: center;
+display: grid;
+
+}
+.contenuc{
+width: 200px;
+height: 300px;
+background-color: white;
+margin: 30px ;
+font-size: 24px;
+padding:10px;
+text-align: center;
+position: center;
+margin-top: 150px
+}
+
+h2{
+color: black;
+margin: 25px;
+font-size: 16.5px;
+}
+
+#main{
+background-color: #000000;
+padding: 40px;
+
+}
+
+.adroite{
+float: right;
+}
+
+footer{
+background-color: none;
+text-align: center;
+padding: 20px;
+color: white;
+background-image: url("https://d2x38s7blvw0lt.cloudfront.net/uploads/2016/09/hack.png");
+}
+header4{
+background-color: white;
+height:375px;
+width: 100%;
+padding: 0;
+margin:0px;
+}
+#conteneur2{
+display: flex;
+flex-direction: row;
+background-color: black;
+margin-top: 300px;
+
+}
+.contenu2{
+height: 300px;
+background-color: white;
+margin: 70px ;
+font-size: 24px;
+padding:20px;
+text-align: center;
+
+
+}
+
+#contenug2{
+width: 450px;
+height: 300px;
+}
+
+#contenuc2{
+width: 1055px;
+height: 300px;
+}
+
+h5{
+font-size: 19px;
+}
+
+#conteneur3{
+display: flex;
+flex-direction: row;
+background-color: black;
+margin-top: 50px;
+}
+
+.contenu3{
+height: 450px;
+width: 30%;
+background-color: white;
+margin: 50px;
+padding:10px;
+text-align: center;
+
+}
+
+h6{
+font-size: 12.6px;
+}
+
+li:hover a{
+color: grey;
+transition: 0.3s all;
+
+}
+.pentagone{
+width: 500px;
+height: 500px;
+padding: 80px;
+}

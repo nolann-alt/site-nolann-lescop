@@ -1,0 +1,114 @@
+
+body{
+background-color: black;
+margin: 0;
+padding: 0;
+}
+nav{
+background-color:none;
+margin:auto;
+padding: 10px;
+width:100%;
+text-align: center;
+background-image: url("https://d2x38s7blvw0lt.cloudfront.net/uploads/2016/09/hack.png");
+}
+.liens{
+color: white;
+padding: 10px;
+font-size: 25px;
+
+}
+
+nav li{
+list-style-type: none;
+display: inline-block;
+margin: 30px ;
+}
+
+h1{
+color: black;
+font-size: 40px;
+text-align: center;
+margin: auto;
+}
+
+header{
+background-color: black;
+height:375px;
+width: 100%;
+padding: 0;
+margin:0px;
+}
+
+#conteneur{
+display: flex;
+flex-direction: row;
+background-color: black;
+}
+
+.contenu{
+width: 500px;
+height: 300px;
+background-color: white;
+margin: 70px ;
+font-size: 24px;
+padding:10px;
+text-align: center;
+}
+
+#contenug{
+width: 800px;
+}
+
+#contenuc{
+width: 800px;
+height: 500px;
+}
+h2{
+color: black;
+margin: 25px;
+font-size: 25px;
+}
+
+
+footer{
+padding: 20px;
+background-image: url("https://d2x38s7blvw0lt.cloudfront.net/uploads/2016/09/hack.png");
+}
+
+li:hover a{
+color: grey;
+transition: 0.3s all;
+
+}
+
+#conteneur2{
+display: flex;
+flex-direction: row;
+background-color: black;
+}
+
+.contenu2{
+width: 500px;
+height: 300px;
+background-color: white;
+margin: 70px ;
+font-size: 24px;
+padding:10px;
+text-align: center;
+
+}
+
+
+.Wikipédia{
+color: #000000;
+
+}
+
+#contenuc2{
+    width: 800px;
+margin-top: 400px;
+position: relative;
+left: 500px;
+
+}
