@@ -1,32 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
 .nav{
     height: 100vb;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #ffffff, #000000); /* Dégradé du blanc au noir */
-    color: #000000; /* Texte noir pour un contraste net */
-    font-family: 'Roboto', sans-serif; /* Une police moderne et professionnelle */
+    background: linear-gradient(135deg, #ffffff, #807b7b);
+    color: #333333;
 }
 
 .boite1{
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    gap: 20px;
     height: 25vh;
     width: 40vh;
     background-color: none;
     text-align: center;
 }
 
-a{
-    color:hsl(from color h s l);
-    text-decoration: none;
-    cursor : pointer;
-}
-
-#but1 {
-    background: #1a1a1a; /* Noir profond pour le fond */
-    color: #ffffff; /* Texte blanc pour un contraste net */
+.but {
+    background: #000000;
+    color: #ffffff; 
     font-family: 'Roboto', sans-serif; /* Police moderne */
     border: none; /* Retirer les bordures par défaut */
     border-radius: 12px; /* Coins arrondis */
@@ -40,66 +42,54 @@ a{
 }
 
 /* Effet au survol (hover) */
-#but1:hover {
-    background: #333333; /* Gris foncé au survol pour un effet élégant */
+.but:hover {
+    background-color: rgb(53, 53, 53); /* Couleur de fond changée au survol */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
     transform: translateY(-3px); /* Légère élévation du bouton */
 }
 
 /* Effet au clic (active) */
-#but1:active {
+.but:active {
     background-color: black; /* Couleur de fond lors du clic */
     transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
 }
 
-#but2 {
-    background-color: black; /* Couleur de fond (vert) */
-    color: white; /* Couleur du texte */
-    border: none; /* Retirer les bordures par défaut */
-    border-radius: 12px; /* Coins arrondis */
-    padding: 15px 32px; /* Espacement interne (haut/bas, gauche/droite) */
-    text-align: center; /* Centrer le texte */
-    text-decoration: none; /* Enlever le souligné du texte */
-    display: inline-block; /* S'assurer que le bouton se comporte comme un élément en ligne */
-    font-size: 16px; /* Taille de la police */
-    cursor: pointer; /* Pointeur de souris pour indiquer que c'est cliquable */
-    transition: all 0.3s ease; /* Effet de transition pour les changements d'état */
+.meteo{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-/* Effet au survol (hover) */
-#but2:hover {
-    background-color: rgb(53, 53, 53); /* Couleur de fond changée au survol */
-    transform: translateY(-3px); /* Légère élévation du bouton */
+.Ville {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-/* Effet au clic (active) */
-#but2:active {
-    background-color: black; /* Couleur de fond lors du clic */
-    transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
+#clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin : 5px;
+    text-align: center;
 }
 
-#but3 {
-    background-color: black; /* Couleur de fond (vert) */
-    color: white; /* Couleur du texte */
-    border: none; /* Retirer les bordures par défaut */
-    border-radius: 12px; /* Coins arrondis */
-    padding: 15px 32px; /* Espacement interne (haut/bas, gauche/droite) */
-    text-align: center; /* Centrer le texte */
-    text-decoration: none; /* Enlever le souligné du texte */
-    display: inline-block; /* S'assurer que le bouton se comporte comme un élément en ligne */
-    font-size: 16px; /* Taille de la police */
-    cursor: pointer; /* Pointeur de souris pour indiquer que c'est cliquable */
-    transition: all 0.3s ease; /* Effet de transition pour les changements d'état */
+h1 {
+    font-size: 24px;
+    color: white
 }
 
-/* Effet au survol (hover) */
-#but3:hover {
-    background-color: rgb(53, 53, 53); /* Couleur de fond changée au survol */
-    transform: translateY(-3px); /* Légère élévation du bouton */
+p {
+    margin: 10px 0;
+    color: white
 }
 
-/* Effet au clic (active) */
-#but3:active {
-    background-color: black; /* Couleur de fond lors du clic */
-    transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
+span {
+    font-weight: bold;
+    color: #777373;
 }
+

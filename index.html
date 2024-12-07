@@ -7,11 +7,23 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
+    <div class="meteo">
+        <div id="clock"></div>
+        <div class = "Ville">
+            <h1>Météo à <span1 id="city" >Chargement...</span1></h1>
+        </div>
+        <div class = "Infos">
+            <p>Température : <span id="temp">...</span>°C</p>
+            <p>Humidité : <span id="humidity">...</span>%</p>
+            <p>Vitesse du vent : <span id="wind">...</span> m/s</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
     <div class="nav">
         <div class="boite1">
-            <div id="but1"><a href="Pictures/CV.jpg">CV</a></div>
-            <div id="but2"><a href="https://nolann-alt.github.io/site-nolann-lescop/CV Nolann LESCOP/index.html">CV Nolann LESCOP (projet terminal STI2D)</a></div>
-            <div id="but3"><a href="Site SNT/index.html">Biographie Kevin Mitnick (projet seconde SNT)</a></div>
+            <a href="Pictures/CV.jpg" class="but">CV</a>
+            <a href="https://nolann-alt.github.io/site-nolann-lescop/CV Nolann LESCOP/index.html" class="but">CV Nolann LESCOP (projet terminal STI2D)</a>
+            <a href="Site SNT/index.html" class="but">Biographie Kevin Mitnick (projet seconde SNT)</a>
         </div>
     </div>
 </body>
