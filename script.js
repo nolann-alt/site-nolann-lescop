@@ -13,6 +13,7 @@ setInterval(updateClock, 1000);
 updateClock();
 
 // =========================================================================================
+
 // URL de l'API
 let weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Muzillac,fr&APPID=05ae9412bf7b1d52f4b0de68b0a04068&units=metric`;
 

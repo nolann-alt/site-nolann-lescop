@@ -1,12 +1,132 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: #000000;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
+    aspect-ratio: 16/9;
 }
 
-.nav{
+.portfolio{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr); /* 24 colonnes pour un contrôle précis */
+    grid-template-rows: repeat(24, 1fr); /* 12 lignes pour diviser l'espace */
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/Pictures/4423x2742-px-Chill-Out-clouds-landscape-mountains-sky-1413233-wallhere.com.jpg);
+    background-size: cover; /* Remplit le conteneur sans déformer */
+    background-position: center; /* Centre l'image */
+    background-repeat: no-repeat; /* Évite que l'image se répète */
+    width: 100%;
+}
+
+#rectangle {
+    position: absolute;
+    width: 280vw; /* Plus large que l'écran */
+    height: 400vh; /* Ajustez la hauteur selon vos besoins */
+    background-color: white;
+    transform: rotate(-45deg); /* Ajustez l'angle selon vos besoins */
+    transform-origin: center;
+}
+
+#triangle {
+    position: absolute; /* Ou absolute selon vos besoins */
+    bottom: 0; /* Distance de 0 depuis le bas */
+    right: 0; /* Distance de 0 depuis la droite */
+    width: 0;
+    height: 0;
+    border-left: 20vw solid transparent; /* Plus adaptatif */
+    border-bottom: 20vw solid rgb(221, 63, 15);
+    
+}
+
+#carre {
+    grid-column: 15 / 23;
+    grid-row: 6 / 20;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-45deg);
+    overflow: hidden;
+}
+
+#carre img {
+    position: absolute; 
+    width: 100%;
+    height: 100%;
+    right : 7%;
+    object-fit: cover; 
+    transform: rotate(45deg) scale(2); /* Centrer et inverser la rotation */ 
+    transform-origin: center; /* Point de rotation au centre */
+}
+
+.presentation {
+    grid-column: 1 / 13;
+    grid-row: 1 / 25;
+    display: grid;
+    grid-template-rows: repeat(24, 1fr);
+    grid-template-columns: repeat(24, 1fr);
+    font-family: 'Times New Roman', Times, ;
+}
+
+.presentation #TitreP1 {
+    grid-row: 9;
+    grid-column: 4 / 25;
+    font-size: 6vw; /* Taille adaptative entre 40px et 95px */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 0; /* Assurez-vous qu'il n'y a pas de marge en bas du titre */
+}
+
+.presentation #TitreP1_2 {
+    font-size: 6vw; /* Taille adaptative similaire à TitreP1 */
+    color: rgb(221, 63, 15);
+    font-weight: bold;
+}
+
+#TitreP2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3vw; /* Taille adaptative entre 20px et 40px */
+    grid-column: 4 / 25;
+    grid-row: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#p1 {
+    margin-top: 0;
+    grid-row: 12;
+    grid-column: 4 / 25;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.5vw; /* Ajustez selon la taille du paragraphe */
+}
+
+#points {
+    color: rgb(221, 63, 15);
+    font-size: 6vw; /* Même logique que les autres titres */
+    grid-row: 21;
+    grid-column: 4;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.page1{
     height: 100vb;
     display: flex;
     justify-content: center;
@@ -54,15 +174,7 @@ body {
     transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
 }
 
-.meteo{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.Ville {
+.Titre {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -84,7 +196,6 @@ h1 {
 }
 
 p {
-    margin: 10px 0;
     color: white
 }
 
@@ -92,4 +203,3 @@ span {
     font-weight: bold;
     color: #777373;
 }
-
