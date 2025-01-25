@@ -7,20 +7,10 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="nav">
-        <div id="clock"></div>
-        <div class = "Titre">
-            <h1>Nolann LESCOP</h1>
-        </div>
-        <div class = "Infos">
-            <p>Météo à <span id="city" >Chargement...</span> :</p>
-            <p>Température : <span id="temp">...</span>°C</p>
-            <p>Humidité : <span id="humidity">...</span>%</p>
-            <p>Vitesse du vent : <span id="wind">...</span> m/s</p>
-        </div>
-    </header>
-    <script src="script.js"></script>
     <main>
+        <div class="pageInitiale">
+            <H1 id="Titre">Welcome to my website !</H1>
+        </div>
         <div class = "portfolio">
             <div class = "presentation">
                 <h1 id="TitreP1">Nolann <span id="TitreP1_2">Lescop.</span></h1>
@@ -41,7 +31,19 @@
                 <a href="Site SNT/index.html" class="but">Biographie Kevin Mitnick (projet seconde SNT)</a>
             </div>
         </div>
+        <div class="meteo">
+            <div id="clock"></div>
+            <div class = "Titre">
+                <h1>Météo</h1>
+            </div>
+            <div class = "Infos">
+                <p>Météo à <span id="city" >Chargement...</span> :</p>
+                <p>Température : <span id="temp">...</span>°C</p>
+                <p>Humidité : <span id="humidity">...</span>%</p>
+                <p>Vitesse du vent : <span id="wind">...</span> m/s</p>
+            </div>
+        </div>
     </main>
-    
+    <script type="module" src="script.js"></script>
 </body>
 </html>

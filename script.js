@@ -1,3 +1,5 @@
+import gsap from "gsap";
+
 function updateClock() {
     const now = new Date();
     const hours = String(now.getHours()).padStart(2, '0');
@@ -28,3 +30,18 @@ fetch(weatherApiUrl)
         })
     )
     .catch((err) => console.log('Erreur : ' + err));
+
+// Animation de fond dynamique pour .pageInitiale
+gsap.to("pageInitiale", {
+    backgroundColor: "violet", // Première couleur
+    duration: 2, // Durée de transition
+    repeat: -1, // Animation infinie
+    yoyo: true, // Revenir à l'état initial
+    ease: "power2.inOut", // Douceur de l'animation
+    onRepeat: () => {
+      // Alterner les couleurs à chaque répétition
+        const colors = ["violet", "green", "black"];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        gsap.to(".pageInitiale", { backgroundColor: randomColor, duration: 2 });
+    },
+    });

@@ -1,0 +1,203 @@
+body {
+  color: #fff;
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+.pageInitiale {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+}
+
+.portfolio {
+  background-image: linear-gradient(#000c, #000c), url("4423x2742-px-Chill-Out-clouds-landscape-mountains-sky-1413233-wallhere.com.5e987c61.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-template-rows: repeat(24, 1fr);
+  grid-template-columns: repeat(24, 1fr);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  position: relative;
+  overflow: hidden;
+}
+
+#rectangle {
+  transform-origin: center;
+  background-color: #fff;
+  width: 280vw;
+  height: 400vh;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+
+#triangle {
+  border-bottom: 20vw solid #dd3f0f;
+  border-left: 20vw solid #0000;
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#carre {
+  grid-area: 6 / 15 / 20 / 23;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  transform: rotate(-45deg);
+}
+
+#carre img {
+  object-fit: cover;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  right: 7%;
+  transform: rotate(45deg)scale(2);
+}
+
+.presentation {
+  font-family: "Times New Roman", Times, ;
+  grid-area: 1 / 1 / 25 / 13;
+  grid-template-rows: repeat(24, 1fr);
+  grid-template-columns: repeat(24, 1fr);
+  display: grid;
+}
+
+.presentation #TitreP1 {
+  color: #fff;
+  grid-area: 9 / 4 / auto / 25;
+  margin-bottom: 0;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+.presentation #TitreP1_2 {
+  color: #dd3f0f;
+  font-size: 6vw;
+  font-weight: bold;
+}
+
+#TitreP2 {
+  flex-direction: column;
+  grid-area: 10 / 4 / auto / 25;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3vw;
+  display: flex;
+}
+
+#p1 {
+  flex-direction: column;
+  grid-area: 12 / 4 / auto / 25;
+  justify-content: center;
+  margin-top: 0;
+  font-size: 1.5vw;
+  display: flex;
+}
+
+#points {
+  color: #dd3f0f;
+  grid-area: 21 / 4;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 6vw;
+}
+
+.page1 {
+  color: #333;
+  background: linear-gradient(135deg, #fff, #807b7b);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vb;
+  display: flex;
+}
+
+.boite1 {
+  background-color: none;
+  text-align: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 40vh;
+  height: 25vh;
+  display: flex;
+}
+
+.but {
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background: #000;
+  border: none;
+  border-radius: 12px;
+  padding: 15px 32px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all .3s;
+  display: inline-block;
+}
+
+.but:hover {
+  background-color: #353535;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px #00000026;
+}
+
+.but:active {
+  background-color: #000;
+  transform: translateY(1px);
+}
+
+.Titre {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+}
+
+.meteo {
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+}
+
+#clock {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5px;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+}
+
+h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+p {
+  color: #fff;
+}
+
+span {
+  color: #777373;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.3a01df49.css.map */
