@@ -1,4 +1,4 @@
-import gsap from "gsap";
+
 
 function updateClock() {
     const now = new Date();
@@ -31,17 +31,7 @@ fetch(weatherApiUrl)
     )
     .catch((err) => console.log('Erreur : ' + err));
 
-// Animation de fond dynamique pour .pageInitiale
-gsap.to("pageInitiale", {
-    backgroundColor: "violet", // Première couleur
-    duration: 2, // Durée de transition
-    repeat: -1, // Animation infinie
-    yoyo: true, // Revenir à l'état initial
-    ease: "power2.inOut", // Douceur de l'animation
-    onRepeat: () => {
-      // Alterner les couleurs à chaque répétition
-        const colors = ["violet", "green", "black"];
-        const randomColor = colors[Math.floor(Math.random() * colors.length)];
-        gsap.to(".pageInitiale", { backgroundColor: randomColor, duration: 2 });
-    },
-    });
+const page1 = document.querySelector(".pageInitiale");
+const page2 = document.querySelector(".portfolio");
+
+gsap.to(page1, {})

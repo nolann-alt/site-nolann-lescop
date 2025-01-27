@@ -12,9 +12,79 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
     margin: 0;
 }
+
+.bulle-externe {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: -1; /* Permet de placer l'élément derrière les autres */
+    top: 0; /* Remplir l'écran */
+    left: 0; /* Remplir l'écran */
+    filter: blur(100px); /* Flou */
+}
+
+.bulle-interne {
+    position: absolute; /* Position absolue pour le positionnement */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Largeur égale à la largeur de l'écran */
+    height: 100vh; /* Hauteur égale à la hauteur de l'écran */
+    min-width: 1000px; /* Largeur minimale pour éviter les déformations */
+    overflow: hidden; /* Cache le contenu dépassant de la bulle */
+    background-color: #180635;
+}
+
+.bulle {
+    position: absolute;
+    width: 15.63vw;
+    height: 27.78vh;
+    top: 200px;
+    left: 100px; 
+    background: conic-gradient(from 0deg, #0d0c3b, #552d91, #832f91, #0d0c3b); /* Dégradé conique */
+    animation: rotationBulle 13s linear infinite; /* Animation de rotation */
+}
+
+.bulle1 {
+    position: absolute;
+    width: 15.63vw;
+    height: 27.78vh;
+    left: 0;
+    top: 0;
+    background: conic-gradient(#0d0c3b, rgba(105, 74, 235, 0.6), #6c1e91, #0d0c3b); /* Dégradé conique */
+    animation: diagonale 10s linear infinite alternate; /* Animation de mouvement */
+}
+
+.bulle2 {
+    position: absolute;
+    width: 10.42vw;
+    height: 18.52vh;
+    top: 0;  /* En haut */
+    right: 0;  /* À droite */
+    transform: translate(0, 20px); /* Décale l'élément un peu plus bas de 20px */
+    background: conic-gradient(from 0deg, #6c1e91, #9d4edd, #b03dde, #6c1e91); /* Dégradé conique */
+    animation: rotationBulle 13s linear infinite; /* Animation de rotation */
+}
+
+@keyframes rotationBulle {
+    0% {
+        transform: rotate(0deg) scale(2); /* Permet de centrer l'animation */
+    }
+    100% {
+        transform: rotate(1turn) scale(2); /* Rotation complète */
+    }
+}
+
+@keyframes diagonale {
+    0% {
+        transform: translate(0, 0) scale(2); /* Position de départ : en haut à gauche */
+    }
+    100% {
+        transform: translate(100vw, 100vh) scale(2); /* Fin du mouvement : en bas à droite */
+    }
+}
+
 
 .portfolio{
     position: relative;
@@ -24,7 +94,7 @@ body {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/Pictures/4423x2742-px-Chill-Out-clouds-landscape-mountains-sky-1413233-wallhere.com.jpg);
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/Pictures/4423x2742-px-Chill-Out-clouds-landscape-mountains-sky-1413233-wallhere.com.jpg);*/
     background-size: cover; /* Remplit le conteneur sans déformer */
     background-position: center; /* Centre l'image */
     background-repeat: no-repeat; /* Évite que l'image se répète */
@@ -33,7 +103,7 @@ body {
 
 #rectangle {
     position: absolute;
-    width: 280vw; /* Plus large que l'écran */
+    width: 285vw; /* Plus large que l'écran */
     height: 400vh; /* Ajustez la hauteur selon vos besoins */
     background-color: white;
     transform: rotate(-45deg); /* Ajustez l'angle selon vos besoins */
@@ -47,7 +117,7 @@ body {
     width: 0;
     height: 0;
     border-left: 20vw solid transparent; /* Plus adaptatif */
-    border-bottom: 20vw solid rgb(221, 63, 15);
+    border-bottom: 20vw solid #6c1e91;
     
 }
 
@@ -91,8 +161,10 @@ body {
 
 .presentation #TitreP1_2 {
     font-size: 6vw; /* Taille adaptative similaire à TitreP1 */
-    color: rgb(221, 63, 15);
+    color: #6c1e91;
     font-weight: bold;
+    /*-webkit-text-stroke: 0.5px white; /* Contour blanc */
+    
 }
 
 #TitreP2 {
@@ -117,7 +189,7 @@ body {
 }
 
 #points {
-    color: rgb(221, 63, 15);
+    color: #6c1e91;
     font-size: 6vw; /* Même logique que les autres titres */
     grid-row: 21;
     grid-column: 4;
@@ -125,15 +197,12 @@ body {
     margin-bottom: 0;
 }
 
-
-
 .page1{
     height: 100vb;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #ffffff, #807b7b);
     color: #333333;
 }
 
@@ -181,12 +250,20 @@ body {
     flex-direction: column;
 }
 
+#Titre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 6vw;
+}
+
 .meteo {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: rgba(0, 0, 0, 0.30);
 }
 
 #clock{

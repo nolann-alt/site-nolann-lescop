@@ -3,7 +3,7 @@
 85D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules\gsap\types\easel-plugin.d.ts133823198021151282 0
 52D:\Vs Code\NAS\CV Github\site-nolann-lescop\Pictures133819704762431345 1
 85D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules\gsap\types\gsap-plugins.d.ts133823198021191311 0
-54D:\Vs Code\NAS\CV Github\site-nolann-lescop\index.html133823199902205420 0
+54D:\Vs Code\NAS\CV Github\site-nolann-lescop\index.html133823217554938807 0
 85D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules\gsap\types\gs-dev-tools.d.ts133823198021171291 0
 60D:\Vs Code\NAS\CV Github\site-nolann-lescop\CV Nolann LESCOP133769358393573515 1
 82D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules\gsap\types\draggable.d.ts133823198021131169 0
@@ -12,12 +12,12 @@
 69D:\Vs Code\NAS\CV Github\site-nolann-lescop\CV Nolann LESCOP\Photo CV133769350486855998 1
 48D:\Vs Code\NAS\CV Github\site-nolann-lescop\dist133823200846865003 1
 56D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules133823198021456672 1
-53D:\Vs Code\NAS\CV Github\site-nolann-lescop\style.css133823186529385580 0
+53D:\Vs Code\NAS\CV Github\site-nolann-lescop\style.css133823221385144274 0
 56D:\Vs Code\NAS\CV Github\site-nolann-lescop\package.json133823198021391537 0
 67D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules\gsap\types133823198021351537 1
 75D:\Vs Code\NAS\CV Github\site-nolann-lescop\node_modules\.package-lock.json133823198021456672 0
 61D:\Vs Code\NAS\CV Github\site-nolann-lescop\package-lock.json133823198021446675 0
-53D:\Vs Code\NAS\CV Github\site-nolann-lescop\script.js133823198107035378 0
+53D:\Vs Code\NAS\CV Github\site-nolann-lescop\script.js133823221254241015 0
 52D:\Vs Code\NAS\CV Github\site-nolann-lescop\Site SNT133779878396740682 1
 63D:\Vs Code\NAS\CV Github\site-nolann-lescop\Site SNT\index.html133779879614808454 0
 74D:\Vs Code\NAS\CV Github\site-nolann-lescop\Site SNT\petite_resolution.css133779875220088977 0
