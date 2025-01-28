@@ -1,4 +1,4 @@
-
+gsap.registerPlugin(ScrollTrigger);
 
 function updateClock() {
     const now = new Date();
@@ -31,7 +31,26 @@ fetch(weatherApiUrl)
     )
     .catch((err) => console.log('Erreur : ' + err));
 
-const page1 = document.querySelector(".pageInitiale");
-const page2 = document.querySelector(".portfolio");
+gsap.to(".portfolio", {
+    scrollTrigger: {
+        trigger: ".portfolio", // La deuxième page agit comme déclencheur
+        start: "top 80%",      // Début de l'animation
+        end: "top 30%",        // Fin de l'animation
+        scrub: true,           // Synchronise avec le défilement
+        markers: true          // Affiche les marqueurs pour vérifier
+    },
+    y: -300,                  // Déplacement horizontal
+});
 
-gsap.to(page1, {})
+/*
+gsap.to(".sousPresentation", {
+    scrollTrigger: {
+        trigger: ".sousPresentation",
+        start: "top 80%",
+        end: "top 30%",
+        scrub: true,
+        markers: true
+    },
+    x: -100,
+});
+*/

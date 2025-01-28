@@ -64,7 +64,7 @@ body {
     right: 0;  /* À droite */
     transform: translate(0, 20px); /* Décale l'élément un peu plus bas de 20px */
     background: conic-gradient(from 0deg, #6c1e91, #9d4edd, #b03dde, #6c1e91); /* Dégradé conique */
-    animation: rotationBulle 13s linear infinite; /* Animation de rotation */
+    animation: rotationBulle 5s linear infinite; /* Animation de rotation */
 }
 
 @keyframes rotationBulle {
