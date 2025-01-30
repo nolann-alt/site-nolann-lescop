@@ -42,15 +42,17 @@ gsap.to(".portfolio", {
     y: -300,                  // Déplacement horizontal
 });
 
-/*
-gsap.to(".sousPresentation", {
-    scrollTrigger: {
-        trigger: ".sousPresentation",
-        start: "top 80%",
-        end: "top 30%",
-        scrub: true,
-        markers: true
-    },
-    x: -100,
-});
-*/
+gsap.fromTo(".presentation", { 
+    x: "-100vw" 
+},{ 
+        x: "0",  // Revient à sa position initiale
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".presentation",
+            start: "top 80%",
+            end: "top 30%",
+            scrub
+        }
+    }
+);
+
