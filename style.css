@@ -9,10 +9,44 @@ body {
 
 .pageInitiale {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+}
+
+.lien {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    background: linear-gradient(135deg, rgba(110, 142, 251, 0.1), rgba(74, 108, 247, 0.1));
+    border-radius: 12px;
+    color: #ffffff;
+    transition: all 0.3s ease; /* Effet de transition pour les changements d'état */
+}
+
+.lien:hover {
+    transform: translateY(-3px); /* Effet de pression (enfoncer le bouton) */
+}
+
+.lien:active {
+    transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
+}
+
+.lienSite {
+    color:rgb(255, 255, 255);
+    font-size: 2vw;
+    text-decoration: none;
+    margin: 10px;
+    margin-left: 5px;
+}
+
+#internet {
+    height: 6vh;
+    width: 3vw; 
 }
 
 .bulle-externe {

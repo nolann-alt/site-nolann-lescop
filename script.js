@@ -45,14 +45,14 @@ gsap.to(".portfolio", {
 gsap.fromTo(".presentation", { 
     x: "-100vw" 
 },{ 
-        x: "0",  // Revient à sa position initiale
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".presentation",
-            start: "top 80%",
-            end: "top 30%",
-            scrub
-        }
-    }
-);
+    x: 0, 
+    duration: 2, 
+    scrollTrigger: { 
+        trigger: ".presentation", 
+        start: "top 80%", 
+        end: "top 50%", 
+        scrub: true, 
+        markers: true 
+    } 
+});
 
