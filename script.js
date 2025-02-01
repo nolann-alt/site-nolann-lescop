@@ -39,7 +39,7 @@ gsap.to(".portfolio", {
         scrub: true,           // Synchronise avec le défilement
         markers: true          // Affiche les marqueurs pour vérifier
     },
-    y: -300,                  // Déplacement horizontal
+    y: -100,                  // Déplacement horizontal
 });
 
 gsap.fromTo(".presentation", { 
@@ -56,3 +56,10 @@ gsap.fromTo(".presentation", {
     } 
 });
 
+gsap.fromTo(".pageInitiale", {
+    scale: 0.5,
+}, {
+    scale: 1,
+    duration: 2,
+    }
+);
