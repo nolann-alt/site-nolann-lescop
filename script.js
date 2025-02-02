@@ -31,16 +31,6 @@ fetch(weatherApiUrl)
     )
     .catch((err) => console.log('Erreur : ' + err));
 
-gsap.to(".portfolio", {
-    scrollTrigger: {
-        trigger: ".portfolio", // La deuxième page agit comme déclencheur
-        start: "top 80%",      // Début de l'animation
-        end: "top 30%",        // Fin de l'animation
-        scrub: true,           // Synchronise avec le défilement
-        markers: true          // Affiche les marqueurs pour vérifier
-    },
-    y: -100,                  // Déplacement horizontal
-});
 
 gsap.fromTo(".presentation", { 
     x: "-100vw" 
@@ -50,16 +40,39 @@ gsap.fromTo(".presentation", {
     scrollTrigger: { 
         trigger: ".presentation", 
         start: "top 80%", 
-        end: "top 50%", 
+        end: "top 30%", 
         scrub: true, 
         markers: true 
     } 
 });
 
+gsap.fromTo(".pageInitiale", 
+    {
+        scale: 0.5,
+        y: "-100%", // Départ depuis le haut de la page
+        opacity: 0 // Facultatif, pour une transition plus fluide
+    }, 
+    {
+        scale: 1,
+        y: "0%", // Arrivée à sa position normale
+        opacity: 1, // Facultatif
+        duration: 2,
+        ease: "power2.out"
+    }
+);
+
 gsap.fromTo(".pageInitiale", {
-    scale: 0.5,
-}, {
-    scale: 1,
-    duration: 2,
+        x: 0,
+    },
+    {
+        x: "100vw",
+        duration: 12,
+        scrollTrigger: {
+            trigger: ".portfolio",
+            start: "top 80%",
+            end: "top 20%",
+            scrub: true,
+            markers: true
+        }
     }
 );
