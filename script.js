@@ -76,3 +76,19 @@ gsap.fromTo(".pageInitiale", {
         }
     }
 );
+
+gsap.fromTo("nav", {
+        opacity: 0,
+    },
+    {
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+            trigger: ".portfolio",
+            start: "top 60%",
+            end: "top 20%",
+            scrub: true,
+            markers: true
+        }
+    }
+);
