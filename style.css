@@ -47,14 +47,19 @@ nav {
     position: relative; /* Position relative pour les éléments enfants */
 }
 
-.menu a.active::after {
+.menu a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: -5px;
-    width: 100%;
+    width: 0; /* Initialement, la largeur est de 0 */
     height: 2px;
     background-color: #fff;
+    transition: width 0.3s ease; /* Transition pour la largeur de la barre */
+}
+
+.menu a.active::after {
+    width: 100%; /* Barre blanche sous le lien actif */
 }
 
 body {
