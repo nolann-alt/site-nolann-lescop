@@ -1,18 +1,60 @@
+html {
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
 nav {
     width: 100vw;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(135deg, rgba(110, 142, 251, 0.1), rgba(74, 108, 247, 0.1));
+    background-color: rgba(0, 0, 0, 0.30);
     color: #fff;
+    z-index: 1; /* Permet de placer l'élément derrière les autres */
 }
+
+#Nolann {
+    margin: 2vw;
+    margin-left: 8vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
 
 .menu {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 8vw;
+    list-style-type: none;
+}
+
+.menu li {
+    margin-right: 4vw;
+}
+
+.menu li:last-child {
+    margin-right: 0; /* Supprime la marge droite du dernier élément */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative; /* Position relative pour les éléments enfants */
+}
+
+.menu a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
 }
 
 body {

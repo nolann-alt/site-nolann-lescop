@@ -42,7 +42,6 @@ gsap.fromTo(".presentation", {
         start: "top 80%", 
         end: "top 30%", 
         scrub: true, 
-        markers: true 
     } 
 });
 
@@ -72,7 +71,6 @@ gsap.fromTo(".pageInitiale", {
             start: "top 80%",
             end: "top 20%",
             scrub: true,
-            markers: true
         }
     }
 );
@@ -88,7 +86,24 @@ gsap.fromTo("nav", {
             start: "top 60%",
             end: "top 20%",
             scrub: true,
-            markers: true
         }
     }
 );
+
+// JavaScript pour ajouter la classe active au lien correspondant avec GSAP
+const navLinks = document.querySelectorAll('.menu a');
+
+navLinks.forEach(link => {
+    const targetId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(targetId);
+
+    ScrollTrigger.create({
+        trigger: targetSection,
+        start: "top center",
+        end: "bottom center",
+        onEnter: () => link.classList.add('active'),
+        onLeave: () => link.classList.remove('active'),
+        onEnterBack: () => link.classList.add('active'),
+        onLeaveBack: () => link.classList.remove('active'),
+    });
+});
