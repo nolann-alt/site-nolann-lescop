@@ -357,6 +357,11 @@ body {
     margin-bottom: 0;
 }
 
+.competences {
+    height: 100vh;
+    display: flex;
+}
+
 .page1{
     height: 100vb;
     display: flex;

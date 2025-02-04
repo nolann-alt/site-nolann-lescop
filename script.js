@@ -107,3 +107,4 @@ navLinks.forEach(link => {
         onLeaveBack: () => link.classList.remove('active'),
     });
 });
+
