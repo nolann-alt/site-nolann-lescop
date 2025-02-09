@@ -24,7 +24,7 @@
     </div>
     
     <main>
-        <div class="pageInitiale" id="pageInitiale">
+        <section class="pageInitiale" id="pageInitiale">
             <div class="bulleLogo">
                 <a href="#presentation" class="logo1"> <img src="Pictures/user.png" id="imgLogo1"></a>
                 <a href="https://github.com/nolann-alt" class="logo2"> <img src="Pictures/github.png" id="imgLogo2"></a>
@@ -34,8 +34,8 @@
                 <img src="Pictures/internet.png" alt="Logo" id="internet">
                 <a href="https://nolann-alt.github.io/site-nolann-lescop/" class="lienSite">https://site-nolann-lescop</a>
             </div>
-        </div>
-        <div class ="portfolio">
+        </section>
+        <section class ="portfolio">
             <div class ="presentation" id="presentation">
                 <h1 id="TitreP1">Nolann <span id="TitreP1_2">Lescop.</span></h1>
                 <h2 id="TitreP2">IT work-study</h2>
@@ -49,20 +49,40 @@
             <div id="carre">
                 <img src="Pictures/Nolann.jpg" alt="Portrait">
             </div>
-        </div>
-        <div class="aPropos">
-            <section id="formation">Formation</section>
-            <section id="skills">Compétences</section>
-            <section id="centres d'interet">Centres d'intérêts</section>
-        </div>
-        <div class="page1" id="page1">
+        </section>
+        <section class="about-me">
+            <h1>About me</h1>
+            <p>In this section, you will find three parts: my skills, which showcase what I can do, my education, which outlines my learning journey, and my interests, which reflect my passions.</p>
+        </section>
+        <section id="horizontal-sections" class="horizontal-sections">
+            <div class="horizontal-menu">
+                <a href="#formation">Formation</a>
+                <a href="#skills">Compétences</a>
+                <a href="#centres-d-interet">Centres d'intérêts</a>
+            </div>
+            <div class="horizontal-content">
+                <section id="formation" class="content-section">
+                    <h2>Formation</h2>
+                    <p>AAAAAAAAAAAAA</p>
+                </section>
+                <section id="skills" class="content-section">
+                    <h2>Compétences</h2>
+                    <p>BBBBBBBBBBB</p>
+                </section>
+                <section id="centres-d-interet" class="content-section">
+                    <h2>Centres d'intérêts</h2>
+                    <p>CCCCCCCCCCCCCCCC</p>
+                </section>
+            </div>
+        </section>
+        <section class="page1" id="page1">
             <div class="boite1">
                 <a href="Pictures/CV.jpg" class="but">CV</a>
                 <a href="https://nolann-alt.github.io/site-nolann-lescop/CV Nolann LESCOP/index.html" class="but">CV Nolann LESCOP (projet terminal STI2D)</a>
                 <a href="Site SNT/index.html" class="but">Biographie Kevin Mitnick (projet seconde SNT)</a>
             </div>
-        </div>
-        <div class="meteo">
+        </section>
+        <section class="meteo">
             <div id="clock"></div>
             <div class = "Titre">
                 <h1>Météo</h1>
@@ -73,7 +93,7 @@
                 <p>Humidité : <span id="humidity">...</span>%</p>
                 <p>Vitesse du vent : <span id="wind">...</span> m/s</p>
             </div>
-        </div>
+        </sections>
     </main>
     <script type="module" src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

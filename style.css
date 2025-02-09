@@ -357,10 +357,63 @@ body {
     margin-bottom: 0;
 }
 
-.aPropos {
-    height: 100vh;
+.about-me {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
 }
+
+.horizontal-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.horizontal-menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.horizontal-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.horizontal-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.horizontal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.content-section {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content-section.active {
+    display: block;
+}
+
 
 .page1{
     height: 100vb;
@@ -456,5 +509,4 @@ span {
     font-weight: bold;
     color: #777373;
 }
-
 

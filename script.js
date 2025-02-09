@@ -108,3 +108,19 @@ navLinks.forEach(link => {
     });
 });
 
+const horizontalLinks = document.querySelectorAll('.horizontal-menu a');
+const contentSections = document.querySelectorAll('.content-section');
+
+horizontalLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        targetSection.classList.add('active');
+    });
+});
