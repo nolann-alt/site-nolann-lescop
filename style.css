@@ -365,11 +365,19 @@ body {
     flex-direction: column;
 }
 
+#titre-About-Me {
+    font-size: 5vw;
+    font-weight: bold;
+    margin: 0;
+}
+
 #p-about-me {
+    margin-top: 0;
     margin-left: 30vw;
     margin-right: 30vw;
+    text-align: center;
     align-content: center;
-    background-color: royalblue;
+    font-size: 1.5vw;
 }
 
 .horizontal-sections {
