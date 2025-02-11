@@ -90,6 +90,19 @@ gsap.fromTo("nav", {
     }
 );
 
+gsap.fromTo(".about-me-content", { 
+    x: "-100vw" 
+},{ 
+    x: 0, 
+    duration: 2, 
+    scrollTrigger: { 
+        trigger: ".about-me-content", 
+        start: "top 80%", 
+        end: "top 30%", 
+        scrub: true, 
+    } 
+});
+
 // JavaScript pour ajouter la classe active au lien correspondant avec GSAP
 const navLinks = document.querySelectorAll('.menu a');
 
@@ -108,8 +121,29 @@ navLinks.forEach(link => {
     });
 });
 
+/*----------------------------------------------------------------------------------------------------------------------------------------------------*/
+
 const horizontalLinks = document.querySelectorAll('.horizontal-menu a');
 const contentSections = document.querySelectorAll('.content-section');
+
+// Cache toutes les sections sauf la première
+contentSections.forEach((section, index) => {
+    if (index !== 0) {
+        gsap.set(section, { 
+            display: 'none', 
+            opacity: 0,
+            y: 50 
+        });
+    }
+});
+
+// Active le premier lien et affiche la première section
+horizontalLinks[0].classList.add('active');
+gsap.set(contentSections[0], { 
+    display: 'block', 
+    opacity: 1,
+    y: 0 
+});
 
 horizontalLinks.forEach(link => {
     link.addEventListener('click', (event) => {
@@ -124,17 +158,34 @@ horizontalLinks.forEach(link => {
         const targetId = link.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
         
-        // Cache toutes les sections
-        contentSections.forEach(section => {
-            section.style.display = 'none';
-        });
+        // Animation de sortie pour la section active
+        const activeSection = Array.from(contentSections).find(section => 
+            getComputedStyle(section).display !== 'none'
+        );
         
-        // Affiche la section ciblée
-        targetSection.style.display = 'block';
+        if (activeSection) {
+            gsap.to(activeSection, {
+                opacity: 0,
+                y: 50,
+                duration: 0.3,
+                onComplete: () => {
+                    activeSection.style.display = 'none';
+                    
+                    // Animation d'entrée pour la nouvelle section
+                    targetSection.style.display = 'block';
+                    gsap.fromTo(targetSection, {
+                            opacity: 0,
+                            y: 50
+                        },{
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.3
+                        }
+                    );
+                }
+            });
+        }
     });
 });
 
-// Active le premier lien par défaut
-horizontalLinks[0].classList.add('active');
-contentSections[0].style.display = 'block';
 
