@@ -369,6 +369,7 @@ body {
     font-size: 5vw;
     font-weight: bold;
     margin: 0;
+    text-align: center;
 }
 
 #p-about-me {
@@ -384,29 +385,45 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 8vh;
 }
 
 .horizontal-menu {
+    width: 90vw;
+    border-radius: 0.5rem;
+    height: 12vh;
+    background: linear-gradient(135deg, rgba(110, 142, 251, 0.1), rgba(74, 108, 247, 0.1));
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20vh;
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .horizontal-menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.6vw;
     font-weight: bold;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
+    padding: 3.5vh;
+    border-radius: 1rem;
     transition: background-color 0.3s ease;
+    padding-right: 6vw;
+    padding-left: 6vw;
 }
 
 .horizontal-menu a:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.30);
+    padding: 3.5vh;
+    padding-right: 6vw;
+    padding-left: 6vw;
+}
+
+.horizontal-menu a.active {
+    background-color: rgba(0, 0, 0, 0.30);
+    padding: 3.5vh;
+    padding-right: 6vw;
+    padding-left: 6vw;
 }
 
 .horizontal-content {

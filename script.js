@@ -114,13 +114,27 @@ const contentSections = document.querySelectorAll('.content-section');
 horizontalLinks.forEach(link => {
     link.addEventListener('click', (event) => {
         event.preventDefault();
+        
+        // Supprime la classe active de tous les liens
+        horizontalLinks.forEach(l => l.classList.remove('active'));
+        
+        // Ajoute la classe active au lien cliqué
+        link.classList.add('active');
+        
         const targetId = link.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
-
+        
+        // Cache toutes les sections
         contentSections.forEach(section => {
-            section.classList.remove('active');
+            section.style.display = 'none';
         });
-
-        targetSection.classList.add('active');
+        
+        // Affiche la section ciblée
+        targetSection.style.display = 'block';
     });
 });
+
+// Active le premier lien par défaut
+horizontalLinks[0].classList.add('active');
+contentSections[0].style.display = 'block';
+
