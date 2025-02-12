@@ -435,7 +435,7 @@ body {
 
 .content-section {
     display: none;
-    width: 100%;
+    width: 85vw;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
@@ -446,6 +446,86 @@ body {
     display: block;
 }
 
+.but-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#imgIUT {
+    height: 50vh;
+    width: 45vw;
+    border-radius: 1vh;
+}
+
+.card {
+    position: relative;
+    padding: 3px; /* Espace pour l'animation */
+    border-radius: 1vh;
+    background: transparent;
+    margin-right: 5vh;
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.highlight-card::before,
+.highlight-card::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: inherit;
+    animation: rotation 15s linear infinite;
+    background: conic-gradient(
+        from var(--gradient-angle, 0deg),
+        #ffffff,
+        #6c1e91,
+        #ffffff,
+        #6c1e91
+    );
+}
+
+.highlight-card::after {
+    filter: blur(15px);
+}
+
+@keyframes rotation {
+    0% {
+        --gradient-angle: 0deg;
+    }
+    100% {
+        --gradient-angle: 360deg;
+    }
+}
+
+#t-formation {
+    font-size: 1.8vw;
+    margin-bottom: 6vh;
+}
+
+#p-formation {
+    font-size: 1.3vw;
+    margin-left: 1vw;
+}
+
+.lycee-SIN {
+    margin: 0;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#imgSIN {
+    height: 50vh;
+    width: 45vw;
+    border-radius: 1vh;
+}
 
 .page1{
     height: 100vb;
