@@ -618,19 +618,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 2vh;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.container-my-projects.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.horizontal-content {
-    position: relative;
-    min-height: 60vh;
 }
 
 select[data-menu] {
