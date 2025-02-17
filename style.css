@@ -613,10 +613,14 @@ body {
     border-radius: 1vh;
 }
 
+.my-project {
+    display: flex;
+    justify-content: center;
+}
+
 .container-my-projects {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: 2vh;
 }
 
@@ -653,51 +657,43 @@ select[data-menu] option {
     padding: 1vh;
 }
 
-.page1{
-    height: 100vb;
+.project-content {
+    margin-top: 20vh;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #333333;
+    position: relative;
+    height: 90vh;
+    width: 100%;
 }
 
-.boite1{
+.project-item {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 25vh;
-    width: 40vh;
-    background-color: none;
-    text-align: center;
+    justify-content: center;
+    margin: 20vh;
+    background-color: rgba(255, 255, 255, 0.1);S
+}
+
+.project-item.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .but {
-    background: #000000;
-    color: #ffffff; 
-    font-family: 'Roboto', sans-serif; /* Police moderne */
-    border: none; /* Retirer les bordures par défaut */
-    border-radius: 12px; /* Coins arrondis */
-    padding: 15px 32px; /* Espacement interne (haut/bas, gauche/droite) */
-    text-align: center; /* Centrer le texte */
-    text-decoration: none; /* Enlever le souligné du texte */
-    display: inline-block; /* S'assurer que le bouton se comporte comme un élément en ligne */
-    font-size: 16px; /* Taille de la police */
-    cursor: pointer; /* Pointeur de souris pour indiquer que c'est cliquable */
-    transition: all 0.3s ease; /* Effet de transition pour les changements d'état */
-}
-
-/* Effet au survol (hover) */
-.but:hover {
-    background-color: rgb(53, 53, 53); /* Couleur de fond changée au survol */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Ombre plus marquée */
-    transform: translateY(-3px); /* Légère élévation du bouton */
-}
-
-/* Effet au clic (active) */
-.but:active {
-    background-color: black; /* Couleur de fond lors du clic */
-    transform: translateY(1px); /* Effet de pression (enfoncer le bouton) */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 4vh;
+    color: #fff;
+    border-radius: 1vh;
+    background: linear-gradient(135deg, rgba(110, 142, 251, 0.1), rgba(74, 108, 247, 0.1));
 }
 
 .Titre {

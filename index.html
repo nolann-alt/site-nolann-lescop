@@ -192,18 +192,24 @@
         </section>
         <section class="my-project">
             <div class="container-my-projects">
-                <select data-menu>
-                    <option selected>My CV</option>
-                    <option>Second year project</option>
-                    <option>Final year project</option>
-                </select>
-            </div>
-        </section>
-        <section class="page1" id="page1">
-            <div class="boite1">
-                <a href="Pictures/CV.jpg" class="but">CV</a>
-                <a href="https://nolann-alt.github.io/site-nolann-lescop/CV Nolann LESCOP/index.html" class="but">CV Nolann LESCOP (projet terminal STI2D)</a>
-                <a href="Site SNT/index.html" class="but">Biographie Kevin Mitnick (projet seconde SNT)</a>
+                <div class="project-selector">
+                    <select data-menu>
+                        <option value="cv" selected>My CV</option>
+                        <option value="second">Second year project</option>
+                        <option value="final">Final year project</option>
+                    </select>
+                </div>
+                <div class="project-content">
+                    <div class="project-item" data-project="cv">
+                        <a href="Pictures/CV.jpg" class="but">CV</a>
+                    </div>
+                    <div class="project-item" data-project="second">
+                        <a href="CV Nolann LESCOP/index.html" class="but">CV Nolann LESCOP (projet terminal STI2D)</a>
+                    </div>
+                    <div class="project-item" data-project="final">
+                        <a href="Site SNT/index.html" class="but">Biographie de Kevin Mitnick (projet seconde SNT)</a>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="meteo">

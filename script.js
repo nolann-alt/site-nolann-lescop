@@ -188,4 +188,37 @@ horizontalLinks.forEach(link => {
     });
 });
 
+/* filepath: /D:/Vs Code/NAS/CV Github/site-nolann-lescop/script.js */
+document.addEventListener('DOMContentLoaded', () => {
+    const select = document.querySelector('[data-menu]');
+    const projectItems = document.querySelectorAll('.project-item');
 
+    // Afficher le premier projet par défaut
+    projectItems[0].classList.add('active');
+
+    select.addEventListener('change', (e) => {
+        const selectedValue = e.target.value;
+        
+        // Animation de sortie
+        gsap.to('.project-item.active', {
+            opacity: 0,
+            y: -20,
+            duration: 0.3,
+            onComplete: () => {
+                projectItems.forEach(item => {
+                    item.classList.remove('active');
+                    if(item.dataset.project === selectedValue) {
+                        // Animation d'entrée
+                        item.classList.add('active');
+                        gsap.to(item, {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.5,
+                            ease: 'power2.out'
+                        });
+                    }
+                });
+            }
+        });
+    });
+});
