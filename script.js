@@ -103,6 +103,19 @@ gsap.fromTo(".about-me-content", {
     } 
 });
 
+gsap.fromTo(".my-projects-content", { 
+    x: "-100vw" 
+},{ 
+    x: 0, 
+    duration: 2, 
+    scrollTrigger: { 
+        trigger: ".my-projects-content", 
+        start: "top 80%", 
+        end: "top 30%", 
+        scrub: true, 
+    } 
+});
+
 // JavaScript pour ajouter la classe active au lien correspondant avec GSAP
 const navLinks = document.querySelectorAll('.menu a');
 
@@ -188,58 +201,93 @@ horizontalLinks.forEach(link => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const selected = document.querySelector(".selected");
-    const optionsContainer = document.querySelector(".options");
-    const options = document.querySelectorAll(".options li");
+document.addEventListener('DOMContentLoaded', () => {
+    // Sélection des éléments
+    const projectSelector = document.querySelector('.project-selector');
+    const selected = projectSelector.querySelector('.selected');
+    const optionsList = projectSelector.querySelector('.options');
+    const options = optionsList.querySelectorAll('li');
 
-    // Masquer les options au départ
-    gsap.set(optionsContainer, { height: 0, opacity: 0, display: "none" });
+    const cvProject = document.querySelector('.project-item[data-project="cv"]');
+    cvProject.classList.add('active');
 
-    selected.addEventListener("click", () => {
-        if (optionsContainer.style.display === "none") {
-            gsap.to(optionsContainer, { 
-                height: "auto", 
-                opacity: 1, 
-                duration: 0.3, 
-                display: "block", 
-                ease: "power1.out" 
+    // Forcer l'état initial du menu
+    optionsList.style.display = 'none';
+    optionsList.style.opacity = '0';
+    let isOpen = false;
+
+    // Fonction pour ouvrir/fermer le menu
+    const toggleMenu = () => {
+        isOpen = !isOpen;
+        if (isOpen) {
+            gsap.to(optionsList, {
+                opacity: 1,
+                display: 'block',
+                duration: 0.3,
+                ease: 'power2.out'
             });
         } else {
-            gsap.to(optionsContainer, { 
-                height: 0, 
-                opacity: 0, 
-                duration: 0.2, 
-                display: "none", 
-                ease: "power1.in" 
+            gsap.to(optionsList, {
+                opacity: 0,
+                duration: 0.3,
+                ease: 'power2.in',
+                onComplete: () => optionsList.style.display = 'none'
             });
         }
+    };
+
+    // Gestionnaire de clic pour le menu
+    selected.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
     });
 
+    // Gestionnaire pour les options
     options.forEach(option => {
-        option.addEventListener("click", () => {
+        option.addEventListener('click', () => {
+            const selectedValue = option.getAttribute('data-value');
+            const currentItem = document.querySelector('.project-item.active');
+            const nextItem = document.querySelector(`.project-item[data-project="${selectedValue}"]`);
+
+            // Animation de transition
+            if (currentItem) {
+                gsap.to(currentItem, {
+                    opacity: 0,
+                    y: -20,
+                    duration: 0.3,
+                    onComplete: () => {
+                        currentItem.classList.remove('active');
+                        // Animation d'entrée du nouveau projet
+                        nextItem.classList.add('active');
+                        gsap.fromTo(nextItem,
+                            { opacity: 0, y: 20 },
+                            { opacity: 1, y: 0, duration: 0.5 }
+                        );
+                    }
+                });
+            } else {
+                // Si pas de projet actif, afficher directement le nouveau
+                nextItem.classList.add('active');
+                gsap.fromTo(nextItem,
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 0.5 }
+                );
+            }
+
+            // Mettre à jour le texte sélectionné
             selected.textContent = option.textContent;
-            gsap.to(optionsContainer, { 
-                height: 0, 
-                opacity: 0, 
-                duration: 0.2, 
-                display: "none", 
-                ease: "power1.in" 
-            });
+            toggleMenu();
         });
     });
 
-    // Fermer le menu si on clique ailleurs
-    document.addEventListener("click", (e) => {
-        if (!selected.contains(e.target) && !optionsContainer.contains(e.target)) {
-            gsap.to(optionsContainer, { 
-                height: 0, 
-                opacity: 0, 
-                duration: 0.2, 
-                display: "none", 
-                ease: "power1.in" 
-            });
-        }
+    // Fermer le menu en cliquant en dehors
+    document.addEventListener('click', () => {
+        if (isOpen) toggleMenu();
+    });
+
+    // Empêcher la fermeture lors du clic sur les options
+    optionsList.addEventListener('click', (e) => {
+        e.stopPropagation();
     });
 });
 

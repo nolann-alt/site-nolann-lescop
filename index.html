@@ -12,9 +12,9 @@
         <ul class="menu">
             <li><a href="#presentation">Portfolio</a></li>
             <li><a href="#about-me">About me</a></li>
+            <li><a href="#my-project">My projects</a></li>
         </ul>
     </nav>
-
     <div class="bulle-externe">
         <div class="bulle-interne">
             <div class="bulle"></div>
@@ -22,7 +22,6 @@
             <div class="bulle2"></div>
         </div>
     </div>
-    
     <main>
         <section class="pageInitiale" id="pageInitiale">
             <div class="bulleLogo">
@@ -190,25 +189,32 @@
                 </div>
             </section>
         </section>
-        <section class="my-project">
+        <section class="my-project" id="my-project">
+            <section class="my-projects-content">
+                <div id="titre-project">My projects</div>
+                <div id="p-project"><p>In this section, discover my IT projects, including websites and applications that showcase my development skills.</p></div>
+            </section>
             <div class="container-my-projects">
                 <div class="project-selector">
                     <div class="selected">My CV</div>
                     <ul class="options">
                         <li data-value="cv">My CV</li>
-                        <li data-value="second">Second year project</li>
-                        <li data-value="final">Final year project</li>
+                        <li data-value="second">Final year project</li>
+                        <li data-value="final">Second year project</li>
                     </ul>
                 </div>
                 <div class="project-content">
                     <div class="project-item" data-project="cv">
+                        <p id="p-project-content">Here is my CV as a Computer Science BUT student so you can get to know me better.</p>
                         <a href="Pictures/CV.jpg" class="but">CV</a>
                     </div>
                     <div class="project-item" data-project="second">
-                        <a href="CV Nolann LESCOP/index.html" class="but">CV Nolann LESCOP (projet terminal STI2D)</a>
+                        <p id="p-project-content">This website was created during my final year. I taught myself HTML and CSS to develop a small CV that showcases my knowledge of these two languages.</p>
+                        <a href="CV Nolann LESCOP/index.html" class="but">CV Nolann LESCOP (STI2D final project)</a>
                     </div>
                     <div class="project-item" data-project="final">
-                        <a href="Site SNT/index.html" class="but">Biographie de Kevin Mitnick (projet seconde SNT)</a>
+                        <p id="p-project-content">This is the first website I created using HTML and CSS on Replit, based on a code that can be modified freely. It is a biography of the famous computer hacker Kevin Mitnick.</p>
+                        <a href="Site SNT/index.html" class="but">Biography of Kevin Mitnick (SNT second project)</a>
                     </div>
                 </div>
             </div>

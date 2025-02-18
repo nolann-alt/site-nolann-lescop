@@ -340,15 +340,6 @@ body {
     font-size: 1.5vw; /* Ajustez selon la taille du paragraphe */
 }
 
-.presentation1 {
-    grid-column: 1 / 13;
-    grid-row: 1 / 25;
-    display: grid;
-    grid-template-rows: repeat(24, 1fr);
-    grid-template-columns: repeat(24, 1fr);
-    font-family: 'Times New Roman', Times, ;
-}
-
 #points {
     color: #6c1e91;
     font-size: 6vw; /* Même logique que les autres titres */
@@ -613,10 +604,29 @@ body {
     border-radius: 1vh;
 }
 
+#titre-project {
+    font-size: 5vw;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+#p-project {
+    margin-top: 0;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom: 8vh;
+    text-align: center;
+    align-content: center;
+    font-size: 1.5vw;
+}
+
 .my-project {
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30vh;
 }
 
 .container-my-projects .project-selector {
@@ -627,9 +637,34 @@ body {
     position: relative;
     width: 30vw;
     color: white;
-    border-radius: 1vh;
-    cursor: pointer;
     text-align: center;
+    z-index: 100;
+    font-size: 1.6vw;
+}
+
+.options {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1vh;
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    display: none;
+    opacity: 0;
+}
+
+.options li {
+    padding: 2vh;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.options li:hover {
+    background: rgba(108, 30, 145, 0.5);
 }
 
 .selected {
@@ -637,52 +672,45 @@ body {
     background: rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1vh;
-}
-
-.options {
-    justify-self: center;
-    display: none;
-    position: absolute;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    left: 50%; /* Centre l'élément */
-    transform: translateX(-50%); /* Ajuste le centrage */
-}
-
-.options li {
-    padding: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.options li:hover {
-    background: rgba(255, 255, 255, 0.2);
+
+.selected:hover {
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .project-content {
-    margin-top: 20vh;
+    background-color: rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: center;
     position: relative;
-    height: 90vh;
-    width: 100%;
+    height: 60vh;
+    width: 90vw;
+    border-radius: 1vh;
 }
 
 .project-item {
     position: absolute;
     width: 100%;
+    height: 100%;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
     display: flex;
-    justify-content: center;
-    margin: 20vh;
-    background-color: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+    margin: 0;
+}
+
+.project-item[data-project="cv"] {
+    /* État initial pour le CV */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .project-item.active {
@@ -695,11 +723,31 @@ body {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 2vh 4vh;
+    align-items: center; 
+    margin: 15vh;
+    width: 35vw;
+    padding: 4vh 8vh;
     color: #fff;
     border-radius: 1vh;
-    background: linear-gradient(135deg, rgba(110, 142, 251, 0.1), rgba(74, 108, 247, 0.1));
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    font-size: 1.6vw;
+}
+
+.but:hover {
+    transform: translateY(-3px);
+}
+
+.but:active {
+    transform: translateY(1px);
+}
+
+#p-project-content {
+    font-size: 1.6vw;
+    margin: 8vh;
+    margin-top: 6vh;
+    margin-bottom: 0;
+    text-align: center;
 }
 
 .Titre {
@@ -721,6 +769,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin-top: 30vh;
     padding-left: 10px;
     padding-right: 10px;
     background-color: rgba(0, 0, 0, 0.30);
