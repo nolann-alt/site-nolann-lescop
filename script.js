@@ -110,8 +110,8 @@ gsap.fromTo(".my-projects-content", {
     duration: 2, 
     scrollTrigger: { 
         trigger: ".my-projects-content", 
-        start: "top 80%", 
-        end: "top 50%", 
+        start: "top 50%", 
+        end: "top 30%", 
         scrub: true, 
     } 
 });
